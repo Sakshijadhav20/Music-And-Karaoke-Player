@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.brand{
+    width: 70px;
+    margin:  23px 3;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
+
+.dropdown{
+    position:relative;
+    width: 300px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.dropdown.active{
+    margin-top: -200px;
+}
+
+.dropdown::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-46deg);
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+
+.dropdown::before{
+    top: 22px;
+    transform: rotate(-225deg);
+}
+
+.dropdown input{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px rgba(0,0,0,0,5);
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.dropdown.option{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: rgba(225,255,255,0,4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 30px 30px rgba(0,0,0,0,4);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.4s;
+}
+
+.dropdown.active .option{
+    height: 230px;
+}
+
+.dropdown .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dropdown .option div:hover{
+    background: #62baea;
+    color: #fff;
+}
+
+.dropdown .option div i{
+    position: relative;
+    top: 4px;
+    font-size: 1.2em;
+}
